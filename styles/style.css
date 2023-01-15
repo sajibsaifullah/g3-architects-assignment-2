@@ -27,15 +27,21 @@ nav {
     font-weight: 700;
     text-decoration: none;
 }
+.menu-bar ul{
+    display: flex;
 
-.menu-bar a {
+}
+.menu-bar ul li{
+    list-style: none;
+    margin-left: 30px;
+}
+.menu-bar ul li a{
     color: #424242;
     ;
     font-weight: 500;
     font-size: 18px;
     ;
     text-decoration: none;
-    padding-left: 30px;
 }
 
 /* Banner Styles */
@@ -70,6 +76,9 @@ nav {
     border: none;
     border-radius: 8px;
     margin: 30px 0 50px 0;
+}
+.primary-btn:hover{
+    cursor: pointer;
 }
 
 .banner-details img {
@@ -119,9 +128,9 @@ nav {
 
 /* Feature Point Styles */
 .architect-feature {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 130px;
+    display: flex;
+    margin: 130px 240px;
+    gap: 54px;
 }
 
 .all-feature-points {
@@ -228,6 +237,11 @@ nav {
     border: 1px solid #FF900E;
     border-radius: 8px;
     position: relative;
+    transition: transform 3s;
+}
+.container:hover{
+    cursor: pointer;
+    transform: rotate(360deg);
 }
 
 .container h5 {
@@ -268,6 +282,9 @@ nav {
     row-gap: 155px;
     margin: 50px 240px 130px 240px;
 }
+.sponsors-details img{
+    filter: grayscale(100%);
+}
 
 /* Footer Styles */
 .footer{
@@ -281,3 +298,89 @@ nav {
     text-align: center;
     padding: 40px 410px;
 }
+
+/* Responsive media */
+@media only screen and (max-width: 576px) {
+    .header{
+        width: 100%;
+        height: 100vh;
+    }
+    nav,
+    .menu-bar ul
+     {
+        flex-direction: column;
+    }
+    .banner-details img{
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    .banner-title{
+        font-size: 25px;
+    }
+    .feature{
+        flex-direction: column;
+    }
+    .feature-img{
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 0;
+        margin-top: 130px;
+    }
+    .our-feature{
+        margin-left: 10px;
+        margin-right: 0;
+    }
+    .feature-title{
+        font-size: 25px;
+    }
+    .architect-feature{
+        flex-direction: column;
+        margin: 10px;
+    }
+    .all-feature-points{
+        margin: 10px;
+    }
+    .feature-sub-point{
+        width: 300px;
+        height: 300px;
+    }
+    .architect-img img{
+        width: 100%;
+    }
+    .exp-btn{
+        width: 200px;
+    height: 100px;
+    
+    font-weight: 700;
+    font-size: 25px;
+    left: -10px;
+    bottom: 40px;
+
+    }
+    .facts-container{
+        grid-template-columns: repeat(1, 1fr) ;
+    }
+    .facts-title, .facts-dsc{
+        margin-left: 10px;
+    }
+    .facts-container{
+        margin-left: 50px;
+    }
+    .sponsors-details{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 50px 10px;
+    }
+    .footer{
+        height: 350px;
+        width: 500px;
+    }
+    .footer{
+        margin: 0;
+        width: 350px;
+        height: 100px;
+    }
+    .text{
+        padding: 0 20px;
+    }
+}
+
