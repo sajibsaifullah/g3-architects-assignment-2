@@ -136,7 +136,7 @@ nav {
 .all-feature-points {
     display: flex;
     flex-direction: column;
-    margin-left: 240px;
+    margin-left: 0;
     margin-right: 50px;
 }
 
@@ -312,7 +312,6 @@ nav {
     }
     .banner-details img{
         width: 100%;
-        height: auto;
         margin: 0;
     }
     .banner-title{
@@ -336,6 +335,9 @@ nav {
     .architect-feature{
         flex-direction: column;
         margin: 10px;
+    }
+    .feature-img img{
+        width: 100%;
     }
     .all-feature-points{
         margin: 10px;
